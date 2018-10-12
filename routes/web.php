@@ -15,7 +15,6 @@ Route::get('/', 'HomeController@welcome');
 
 // Movies
 Route::get('movies', 'MoviesController@index')->name('movies');
-Route::get('movies/create', 'MoviesController@create');
 Route::get('movies/{id}', 'MoviesController@show');
 
 // Genres

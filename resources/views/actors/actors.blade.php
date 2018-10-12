@@ -6,7 +6,7 @@
     <ul>
         @foreach($actors as $actor)
         <li>
-            <a href="movies/{{ $actor->id }}">{{ $actor->first_name }} {{ $actor->last_name }}</a>
+            <a href="#">{{ $actor->first_name }} {{ $actor->last_name }}</a>
         </li>
         @endforeach
     </ul>
