@@ -26,17 +26,17 @@
 <body>
     <div class="container">
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="#">Movies Database</a>
+        <a class="navbar-brand" href="/">Movies Database</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
-            <li class="nav-item"><a class="nav-link" href="{{ route('movies') }}">Index</a> </li>
-                <li class="nav-item"><a class="nav-link" href="actors">Actores</a></li>
-            <li class="nav-item"><a class="nav-link" href="genres">Peliculas por Genero</a></li>
-                <li class="nav-item"><a class="nav-link" href="movies/create">Agregar Pelicula</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('movies') }}">Index</a> </li>
+                    <li class="nav-item"><a class="nav-link" href="/actors">Actores</a></li>
+                <li class="nav-item"><a class="nav-link" href="/genres">Peliculas por Genero</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/movies/create">Agregar Pelicula</a></li>
             </ul>
             <form class="form-inline mt-2 mt-md-0" method="get">
                 {{ csrf_field() }}
@@ -48,7 +48,7 @@
     </div>
 
     @yield('content')
-    @yield('edit')
+ 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

@@ -1,6 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
+
 <div class="col-7 offset-1">
 <h1 class="">Agregar Película</h1>
 @if (count($errors) > 0)
@@ -13,8 +14,8 @@
 </div>
 @endif
 
-    <form class="" action="movies/create" method="post" enctype="multipart/form-data">
-        {{ csrf_field() }}
+    <form class="" action="/movies/create" method="post" enctype="multipart/form-data">
+        @csrf
         <div class="form-group">
             <label for="titulo">Titulo</label>
             <input type="text" name="titulo" value="{{ old("titulo") }}" class="form-control">
@@ -57,4 +58,5 @@
         </div>
     </form>
 </div>
+
 @endsection

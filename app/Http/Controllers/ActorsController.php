@@ -25,7 +25,7 @@ class ActorsController extends Controller
      */
     public function create()
     {
-        //
+        //...
     }
 
     /**
