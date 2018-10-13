@@ -8,7 +8,13 @@
     <h4>Rating: {{ $movie->rating }}</h4>
     <h4>Premios: {{ $movie->awards }}</h4>
     
-    <a href="{{ url("movies/$movie->id/edit") }}">Editar</a>
+    <a href="{{ url("movies/$movie->id/edit") }}">Editar Pelicula</a>
+    <br>
+    <br>
+    <form action="" method="delete" value="DELETE">
+        
+        <button type="submit" class="btn btn-danger">Eliminar Pelicula</button>
+    </form>
     
     <br>
     <a href="{{ route('movies') }}">Volver a Index de Peliculas</a>

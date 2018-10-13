@@ -110,8 +110,8 @@ class MoviesController extends Controller
         $movie->release_date = $request->input("fecha_de_estreno");
         $movie->genre_id = $request->input("genero");
 
-        $movie->update();
-
+        $movie->save();
+        return redirect("/movies/$movie->id");
     }
 
     /**

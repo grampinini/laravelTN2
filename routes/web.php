@@ -7,9 +7,11 @@ Route::get('/', 'HomeController@welcome');
 Route::get('movies/create', 'MoviesController@create');
 Route::post('movies/create', 'MoviesController@store');
 Route::get('movies/{id}/edit', 'MoviesController@edit');
-Route::post('movies/{id}/edit', 'MoviesController@update');
+Route::patch('movies/{id}', 'MoviesController@update');
+
 
 Route::get('movies/{id}', 'MoviesController@show');
+Route::delete('movies/{id}', 'MoviesController@destroy');
 Route::get('movies', 'MoviesController@index')->name('movies');
 
 

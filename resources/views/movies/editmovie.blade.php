@@ -13,8 +13,9 @@
     </div>
     @endif
 
-    <form class="" action="/movies/create" method="post" enctype="multipart/form-data">
-        @csrf
+    <form class="" action="/movies/{{ $movie->id }}" method="POST" enctype="multipart/form-data">
+    {{ method_field('PATCH') }}
+    {{ csrf_field() }}
         <div class="form-group">
             <label for="titulo">Titulo</label>
             <input type="text" name="titulo" value="{{ $movie->title }}" class="form-control">
