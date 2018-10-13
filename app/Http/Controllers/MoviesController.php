@@ -111,6 +111,8 @@ class MoviesController extends Controller
         $movie->genre_id = $request->input("genero");
 
         $movie->save();
+
+
         return redirect("/movies/$movie->id");
     }
 
@@ -122,6 +124,10 @@ class MoviesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $movie = Movie::find($id);
+        $movie->delete();
+
+        return redirect("/movies");
+
     }
 }

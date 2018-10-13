@@ -11,8 +11,9 @@
     <a href="{{ url("movies/$movie->id/edit") }}">Editar Pelicula</a>
     <br>
     <br>
-    <form action="" method="delete" value="DELETE">
-        
+    <form action="/movies/{{ $movie->id }}" method="post" value="DELETE">
+        {{ method_field('DELETE') }}
+        {{ csrf_field() }}
         <button type="submit" class="btn btn-danger">Eliminar Pelicula</button>
     </form>
     
