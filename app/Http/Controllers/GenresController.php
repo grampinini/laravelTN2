@@ -49,7 +49,7 @@ class GenresController extends Controller
      */
     public function show($id)
     {
-        $movies = Movie::all()->where('genre_id', '=', $id);
+        $movies = Genre::find($id)->movies;
         return view('genres.movies')->with('movies', $movies);
     }
 

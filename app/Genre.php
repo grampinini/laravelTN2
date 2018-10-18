@@ -8,6 +8,6 @@ class Genre extends Model
 {
     public function movie()
     {
-        $this->hasMany('App\Movie');
+        return $this->hasMany(Movie::class);
     }
 }
