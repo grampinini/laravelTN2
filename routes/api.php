@@ -13,7 +13,7 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
+Route::middleware('auth:api')->get('/user', function(Request $request) {
     return $request->user();
 });
 
@@ -21,6 +21,6 @@ Route::get('movies', function() {
     return Movie::all();
 });
 
-Route::get('movies/{id}', function($id){
+Route::get('movies/{id}', function($id) {
     return Movie::find($id);
 });
