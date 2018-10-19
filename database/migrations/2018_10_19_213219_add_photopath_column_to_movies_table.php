@@ -14,7 +14,7 @@ class AddPhotopathColumnToMoviesTable extends Migration
     public function up()
     {
         Schema::table('movies', function (Blueprint $table) {
-            $table->string('photopath');
+            $table->string('photopath')->nullable();
         });
     }
 
@@ -26,7 +26,7 @@ class AddPhotopathColumnToMoviesTable extends Migration
     public function down()
     {
         Schema::table('movies', function (Blueprint $table) {
-            //
+            $table->dropColumn('photopath');
         });
     }
 }
