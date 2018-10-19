@@ -16,7 +16,7 @@ class MoviesController extends Controller
      */
     public function index()
     {
-        $movies = Movie::all();
+        $movies = Movie::paginate(10);
         return view('movies.movies')->with('movies', $movies);
     }
 
@@ -45,7 +45,8 @@ class MoviesController extends Controller
             "premios" => 'required',
             "duracion" => 'required',
             "fecha_de_estreno" => 'required|date',
-            "genero" => "required"
+            "genero" => "required",
+            "poster" => "required"
         ]);
 
         $movie = new Movie([
@@ -54,7 +55,8 @@ class MoviesController extends Controller
             'awards' => $request->input("premios"),
             'length' => $request->input("duracion"),
             'release_date' => $request->input("fecha_de_estreno"),
-            'genre_id' => $request->input("genero")        
+            'genre_id' => $request->input("genero"),
+            'photopath' => $request->input("poster")        
         ]);
 
         $movie->save();
