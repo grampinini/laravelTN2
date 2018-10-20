@@ -49,6 +49,8 @@ class MoviesController extends Controller
             "poster" => "required"
         ]);
 
+        $file = $request->poster->store('posters', 'public');
+
         $movie = new Movie([
             'title' => $request->input("titulo"),
             'rating' => $request->input("rating"),
@@ -56,10 +58,11 @@ class MoviesController extends Controller
             'length' => $request->input("duracion"),
             'release_date' => $request->input("fecha_de_estreno"),
             'genre_id' => $request->input("genero"),
-            'photopath' => $request->input("poster")        
+            'photopath' => $file        
         ]);
 
         $movie->save();
+        return redirect('movies');
 
     
     }

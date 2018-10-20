@@ -3,6 +3,11 @@
 @section('content')
 
 <div class="offset-1">
+
+
+    <img src="{{ asset('storage/' . $movie->photopath) }}" alt="poster">
+
+
     <h2>{{ $movie->title }}</h2>
     <h4>Fecha de estreno: {{ $movie->release_date }}</h4>
     <h4>Rating: {{ $movie->rating }}</h4>
