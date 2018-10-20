@@ -5,7 +5,7 @@
 <div class="offset-1">
 
 
-    <img src="{{ asset('storage/' . $movie->photopath) }}" alt="poster">
+<img src="{{ asset('storage/' . $movie->photopath) }}" alt="poster de {{ $movie->title }}">
 
 
     <h2>{{ $movie->title }}</h2>

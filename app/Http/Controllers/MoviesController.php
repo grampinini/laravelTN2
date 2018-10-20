@@ -16,6 +16,16 @@ class MoviesController extends Controller
      */
     public function index()
     {
+        // Collections - ejemplo MAP
+        // $movies = Movie::all();
+        // $filtered = $movies->map(function ($movie) {
+        //     return [
+        //         'nombre' => $movie->title
+        //     ];
+        // });
+
+        // dd($filtered->toArray());
+
         $movies = Movie::paginate(10);
         return view('movies.movies')->with('movies', $movies);
     }
@@ -62,7 +72,8 @@ class MoviesController extends Controller
         ]);
 
         $movie->save();
-        return redirect('movies');
+
+        return redirect()->route('movies.show', $movie->id);
 
     
     }
