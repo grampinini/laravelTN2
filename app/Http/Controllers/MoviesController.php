@@ -24,7 +24,7 @@ class MoviesController extends Controller
         //     ];
         // });
 
-        // dd($filtered->toArray());
+        dd($filtered->toArray());
 
         $movies = Movie::paginate(10);
         return view('movies.movies')->with('movies', $movies);
